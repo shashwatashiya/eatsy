@@ -1,0 +1,27 @@
+{
+  "name": "eatsy",
+  "version": "1.0.0",
+  "description": "A food ordering app using React, Redux and TailwindCSS",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/shashwatashiya/eatsy.git)"
+  },
+  "author": "Shashwat Ashiya",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+
+  "browserslist": [
+	"last 10 versions"
+  ]
+}
