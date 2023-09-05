@@ -1,3 +1,5 @@
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,17 +8,22 @@
 
 .logo {
 
-
+    padding: 15px;
     width: 180px;
-    padding: 10px 20px;
+    
+}
+
+.nav-items {
+
+    padding: 0px 20px;
 }
 
 .nav-items > ul {
 
-
+font-size: 24px;
 display: flex;
-padding: 0px 20px;
 list-style-type: none;
+
 
 }
 
@@ -26,4 +33,49 @@ list-style-type: none;
 padding: 10px;
 margin: 10px;
 
+}
+
+.res-card {
+padding: 5px;
+width: 200px;
+height: 350px;
+margin: 10px;
+background-color: rgba(128, 128, 128, 0.132);
+
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+
+
+.search {
+
+    padding: 10px;
+}
+
+.res-logo {
+
+   /* max-width: 100%;       
+    max-height: 100%;      
+    display: block;       
+    margin: auto;          
+    padding: 5px;
+    box-sizing: border-box; */
+
+
+width: 100%;
+}
+
+.res-card h3, .res-card h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.res-container {
+
+    display: flex;
+    flex-wrap: wrap;
 }
