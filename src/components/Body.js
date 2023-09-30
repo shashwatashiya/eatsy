@@ -4,6 +4,8 @@ import resList from "../utils/mockData"
 import {useState, useEffect} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom"
+import useOnlineStatus from "../utils/useOnlineStatus"
+import Button from '@mui/material/Button';
 
 
 
@@ -28,30 +30,40 @@ const Body = () => {
       
    };
 
-   //conditional rendering
 
+const onlineStatus = useOnlineStatus();
+
+if (onlineStatus === false) return (<h1>Looks like you're offline!! Please check your internet connection</h1>)
+
+   //conditional rendering
+ 
 return listOfRestaurants.length === 0 ? <Shimmer /> : (
 
 <div className="body">
 <div className="filter">
    <div className = "search">
       <input type="text" className = "search-box" value = {searchText} onChange = {(e) => { setSearchText(e.target.value)}} /> {/* Wahetver the user types store in searchText */}
-      <button onClick = {() => { 
+      <Button variant="contained" disableElevation onClick = {() => { 
 
          
-         //Filter restaurant cards and update UI
-         const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()) );{/* Using listOfRestaurants here is the key, everytime the user searches it searche in the entire db and not filtered db */}
-         setFilteredRestaurant(filteredRestaurant)
-         
-         
-      }}>Search</button>
-       </div>
-   <button className ="filter-btn" onClick={() => {
-      
-      const filteredList = filteredRestaurant.filter((res) => res.info.avgRating > 4);
-      setFilteredRestaurant(filteredList);
-      
-      } }>Top Rated Restaurants</button>
+//Filter restaurant cards and update UI
+const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()) );{/* Using listOfRestaurants here is the key, everytime the user searches it searche in the entire db and not filtered db */}
+setFilteredRestaurant(filteredRestaurant)
+
+
+}}
+style={{ backgroundColor: 'rgb(250, 109, 53)', color: 'white' }} >Search</Button>
+       </div >
+       <div className="filter-btn-container">
+       <Button variant="contained" className ="filter-btn"  onClick = {() => { 
+
+const filteredList = filteredRestaurant.filter((res) => res.info.avgRating > 4);
+     setFilteredRestaurant(filteredList);
+
+}}
+style={{ backgroundColor: 'rgb(250, 109, 53)', color: 'white' }} >Top Rated Restaurants
+</Button>
+</div>
 </div>
 <div className="res-container">
    { 

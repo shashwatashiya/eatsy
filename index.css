@@ -93,8 +93,9 @@ width: 100%;
 
 .filter-btn {
 
-    margin: 10px;
     cursor: pointer;
+    height: 50px;
+    
 }
 
 .shimmer-cards {
@@ -141,6 +142,10 @@ width: 100%;
 .user-card {
 
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(20, 16, 16);
 }
 
+.filter-btn-container {
+
+    margin: 10px;
+}
