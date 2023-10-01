@@ -76,6 +76,7 @@ filteredRestaurant.map((restaurant) => <Link key = {restaurant.info?.id} to={"/r
 
 </div>
 
+
 )
 
 }

@@ -59,12 +59,7 @@ background-color: rgba(128, 128, 128, 0.132);
 
 .res-logo {
 
-   /* max-width: 100%;       
-    max-height: 100%;      
-    display: block;       
-    margin: auto;          
-    padding: 5px;
-    box-sizing: border-box; */
+  
 
 
 width: 100%;
@@ -148,4 +143,6 @@ width: 100%;
 .filter-btn-container {
 
     margin: 10px;
+    
 }
+
